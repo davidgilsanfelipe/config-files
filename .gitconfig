@@ -1,0 +1,19 @@
+[user]
+        name = <NAME>
+        email = <EMAIL>
+[push]
+        default = current
+[branch]
+        autosetuprebase = always
+[alias]
+        pl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        fshow = ! sh -c 'git show --pretty="format:" --name-only $1 | grep -v "^$" | uniq | sed -e "s#^#`git rev-parse --show-toplevel`/#"' -
+        vim = ! sh -c 'vim `git fshow $1`' -
+        publish = ! sh -c 'git push origin ${2:-HEAD}:refs/publish/${1:-master}%r=egoalva,r=ecejmtr,r=edavlop,r=egidavi,r=eloomas,r=eperefr' -
+#        publish = ! sh -c 'git push origin ${2:-HEAD}:refs/publish/${1:-master}%r=ejuavid,r=ejulrey,r=erebper,r=egidavi,r=evergom' -
+[core]
+        pager = less -r
+
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+[fetch]
