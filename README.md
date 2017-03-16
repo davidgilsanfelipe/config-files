@@ -1,2 +1,2 @@
 # config-files
-Some useful configuration file (.bashrc, .gitconfig....)
+Some useful configuration file (.vimrc, .gitconfig....)
