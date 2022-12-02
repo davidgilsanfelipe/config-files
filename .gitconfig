@@ -13,6 +13,7 @@
 #        publish = ! sh -c 'git push origin ${2:-HEAD}:refs/publish/${1:-master}%r=ejuavid,r=ejulrey,r=erebper,r=egidavi,r=evergom' -
 [core]
         pager = less -r
+        editor = vim
 
 [url "https://github.com/"]
 	insteadOf = git://github.com/
